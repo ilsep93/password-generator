@@ -79,7 +79,7 @@ def export_password():
                         with open("data.json", "r") as data_file:
                                 data = json.load(data_file)
                                 if overwrite is True:
-                                        data[f"{website}"] = new_entry
+                                        data[f"{website}"]["password"] = password
                                 if overwrite is False:
                                         website_entry.delete(0,'end')
                                         password_entry.delete(0, 'end')
