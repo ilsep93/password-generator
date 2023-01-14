@@ -89,7 +89,7 @@ def export_password():
                                 with open("password-manager-start/data.json", "w") as data_file:
                                         json.dump(new_entry, data_file, indent=4)
                 except JSONDecodeError:
-                        os.remove("/Users/ilsepaniagua/100 Days of Python/password-manager-start/data.json")
+                        os.remove("password-manager-start/data.json")
                         with open("password-manager-start/data.json", "w") as data_file:
                                 json.dump(new_entry, data_file, indent=4)
 
