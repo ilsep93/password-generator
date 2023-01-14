@@ -145,7 +145,7 @@ website_text.grid(row=2, column=0)
 email_text = tk.Label(
         text="Email/Username:",
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightthickness=0
         )
 email_text.grid(row=3, column=0)
