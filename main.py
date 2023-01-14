@@ -5,8 +5,6 @@ import tkinter as tk
 from json import JSONDecodeError
 from tkinter import messagebox
 
-WHITE = "#FFFFFF"
-
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 #Password Generator Project
 
@@ -88,7 +86,6 @@ def export_password():
                                         json.dump(new_entry, data_file, indent=4)
                 except JSONDecodeError:
                         os.remove("/Users/ilsepaniagua/100 Days of Python/password-manager-start/data.json")
-                        print("Removed file during export password function")
                         with open("password-manager-start/data.json", "w") as data_file:
                                 json.dump(new_entry, data_file, indent=4)
 
@@ -123,7 +120,7 @@ def search_password():
 #  ---------------------------- UI SETUP ------------------------------- #
 window = tk.Tk()
 window.title("Password Manager")
-window.config(padx=20, pady=20, bg=WHITE)
+window.config(padx=20, pady=20, bg="white")
 
 # Image: row=1, column=2
 
@@ -131,7 +128,7 @@ pass_img = tk.PhotoImage(file="password-manager-start/logo.png")
 canvas = tk.Canvas(
         width=200,
         height=200,
-        bg=WHITE,
+        bg="white",
         highlightthickness=0
         )
 lock = canvas.create_image(100, 100,image=pass_img)
@@ -141,7 +138,7 @@ canvas.grid(row=0, column=1)
 website_text = tk.Label(
         text="Website:",
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightthickness=0)
 website_text.grid(row=2, column=0)
 
@@ -156,7 +153,7 @@ email_text.grid(row=3, column=0)
 password_text = tk.Label(
         text="Password:",
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightthickness=0
         )
 password_text.grid(row=4, column=0)
@@ -165,7 +162,7 @@ password_text.grid(row=4, column=0)
 website_entry = tk.Entry(
         width=35,
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightthickness=0)
 website_entry.focus()
 website_entry.grid(row=2, column=1)
@@ -173,17 +170,17 @@ website_entry.grid(row=2, column=1)
 email_entry = tk.Entry(
         width=35,
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightthickness=0
         )
-email_entry.insert(0, "ilsep@umich.edu")
+email_entry.insert(0, "YOUR DEFAULT EMAIL")
 email_entry.grid(row=3, column=1, columnspan=2, sticky="EW")
 
 
 password_entry = tk.Entry(
         width=21,
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightbackground="white"
         )
 password_entry.grid(row=4, column=1, sticky="EW")
@@ -192,7 +189,7 @@ password_entry.grid(row=4, column=1, sticky="EW")
 password_button = tk.Button(
         text="Generate Password",
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightbackground="white",
         command=generate_password
         )
@@ -202,7 +199,7 @@ add_button = tk.Button(
         text="Add",
         width=36,
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightbackground="white",
         command=export_password
         )
@@ -211,7 +208,7 @@ add_button.grid(row=5, column=1, columnspan=2)
 search_button = tk.Button(
         text="Search",
         fg = "black",
-        bg=WHITE,
+        bg="white",
         highlightbackground="white",
         width=15,
         command=search_password
