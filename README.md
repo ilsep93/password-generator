@@ -8,3 +8,7 @@ Creates a GUI to store passwords in a JSON file. Search functionality for existi
 * .grid() versus .pack() methods for GUI display
 * Error exception handling
 * Reading, updating, and writing JSON data
+
+# To Do:
+  
+* Record a short video demoing the tool
