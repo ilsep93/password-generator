@@ -1,6 +1,7 @@
 import json
 import os
 import random
+import string
 import tkinter as tk
 from json import JSONDecodeError
 from tkinter import messagebox
@@ -8,12 +9,15 @@ from tkinter import messagebox
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 #Password Generator Project
 
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+letters = list(string.ascii_lowercase + string.ascii_uppercase)
+numbers = list(range(0, 10))
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 
 def generate_password():
+        '''
+        Generates a random password by combining letters, numbers, and symbols.
+        '''
         letter_list = [random.choice(letters) for _ in range(random.randint(8, 10))]
         symbol_list = [random.choice(symbols) for _ in range(random.randint(2, 4))]
         num_list = [random.choice(numbers) for _ in range(random.randint(2, 4))]
