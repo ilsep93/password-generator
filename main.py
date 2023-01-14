@@ -177,7 +177,7 @@ email_entry = tk.Entry(
         bg="white",
         highlightthickness=0
         )
-email_entry.insert(0, "YOUR DEFAULT EMAIL")
+email_entry.insert(0, "ilsep@umich.edu")
 email_entry.grid(row=3, column=1, columnspan=2, sticky="EW")
 
 
@@ -185,7 +185,8 @@ password_entry = tk.Entry(
         width=21,
         fg = "black",
         bg="white",
-        highlightbackground="white"
+        highlightbackground="white",
+        show="*"
         )
 password_entry.grid(row=4, column=1, sticky="EW")
 
