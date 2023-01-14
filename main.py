@@ -40,7 +40,7 @@ def overwrite_password():
         """
         website = website_entry.get()
         try:
-                with open("password-manager-start/data.json", "r") as data_file:
+                with open("data.json", "r") as data_file:
                         data = json.load(data_file)
                         if website in data and data is not None:
                                 return messagebox.askyesno(title="Password exists", message=f"Password for {website} already exists. Overwrite?")
@@ -76,7 +76,7 @@ def export_password():
 
                 overwrite = overwrite_password()
                 try:
-                        with open("password-manager-start/data.json", "r") as data_file:
+                        with open("data.json", "r") as data_file:
                                 data = json.load(data_file)
                                 if overwrite is True:
                                         data[f"{website}"] = new_entry
@@ -86,16 +86,16 @@ def export_password():
                                 if overwrite is None:
                                         data.update(new_entry)
                 except FileNotFoundError:
-                                with open("password-manager-start/data.json", "w") as data_file:
+                                with open("data.json", "w") as data_file:
                                         json.dump(new_entry, data_file, indent=4)
                 except JSONDecodeError:
-                        os.remove("password-manager-start/data.json")
-                        with open("password-manager-start/data.json", "w") as data_file:
+                        os.remove("data.json")
+                        with open("data.json", "w") as data_file:
                                 json.dump(new_entry, data_file, indent=4)
 
                 else:
                         if overwrite is True or overwrite is None:
-                                with open("password-manager-start/data.json", "w") as data_file:
+                                with open("data.json", "w") as data_file:
                                         json.dump(data, data_file, indent=4)
 
  
@@ -110,7 +110,7 @@ def search_password():
         website = website_entry.get()
         #Open existing data file
         try:
-                with open("password-manager-start/data.json") as data_file:
+                with open("data.json") as data_file:
                         data = json.load(data_file)
                         result = data[website]
         except FileNotFoundError as no_file:
@@ -128,7 +128,7 @@ window.config(padx=20, pady=20, bg="white")
 
 # Image: row=1, column=2
 
-pass_img = tk.PhotoImage(file="password-manager-start/logo.png")
+pass_img = tk.PhotoImage(file="logo.png")
 canvas = tk.Canvas(
         width=200,
         height=200,
