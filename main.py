@@ -97,6 +97,7 @@ def export_password():
                         if overwrite is True or overwrite is None:
                                 with open("data.json", "w") as data_file:
                                         json.dump(data, data_file, indent=4)
+                                        messagebox.showinfo(title="Success", message="New password was saved!")
                                         website_entry.delete(0,'end')
                                         password_entry.delete(0, 'end')
 
