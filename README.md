@@ -5,9 +5,7 @@ Creates a GUI to store passwords in a JSON file. Search functionality for existi
 
 This demo main functionalities of the app, including saving passwords, password lookup, and options for detecting and overwriting existing passwords.
 
-Note that for the demo, the passwords are visible to showcase how they change when overwritten. The default email is also not present.
-
-https://user-images.githubusercontent.com/54957973/215856260-7b7424c7-08fe-45cf-b3d6-5b4d44787ee8.mov
+https://user-images.githubusercontent.com/54957973/215865821-277a54af-e5c9-4339-867c-0182ce2578b8.mov
 
 # Lessons Learned:
 
