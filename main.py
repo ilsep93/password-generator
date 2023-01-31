@@ -180,7 +180,7 @@ email_entry = tk.Entry(
         bg="white",
         highlightthickness=0
         )
-email_entry.insert(0, "ilsep@umich.edu")
+email_entry.insert(0, "email@gmail.com")
 email_entry.grid(row=3, column=1, columnspan=2, sticky="EW")
 
 
