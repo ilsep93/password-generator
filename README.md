@@ -14,7 +14,3 @@ https://user-images.githubusercontent.com/54957973/215865821-277a54af-e5c9-4339-
 * .grid() versus .pack() methods for GUI display
 * Error exception handling
 * Reading, updating, and writing JSON data
-
-# To Do:
-  
-* Record a short video demoing the tool
